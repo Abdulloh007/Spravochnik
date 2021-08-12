@@ -1,0 +1,25 @@
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+
+
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.russ{
+  background-color: #888888;
+  border: 2px #555555 solid;
+  border-top: none;
+  color: white;
+}
+.length {
+  margin-top: 15px;
+  padding: 5px 10px;
+  text-align: center
+}
+

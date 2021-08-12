@@ -1,0 +1,59 @@
+.sating{
+  background-color: #888888;
+  border: 1px #555555 solid;
+}
+.header-section h4{
+  max-height: 50px;
+  padding: 10px 20px;
+  color: white;
+}
+.img-section{
+  max-height: 100%;
+  max-width: 100%;
+  width: 1000px;
+  height: 300px;
+  overflow: hidden;
+}
+.img-section img{
+  zoom: 88%;
+}
+.title-img-section{
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  width: 300px;
+  height: 300px;
+  margin-top: -300px;
+  margin-left: -33px;
+  opacity: 0;
+}
+.title-img-section h4{
+  padding: 10px 15px;
+  margin-top: 210px;
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+}
+.img-section:hover, .title-img-section:hover{
+  margin-left: 0;
+  opacity: 1;
+  transition: 0.5s;
+}
+.footer-section{
+  height: 100px;
+  overflow-x: hidden;
+  font-size: 14px;
+  color: white;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+
+
+}
+::-webkit-scrollbar-thumb {
+  background: white;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

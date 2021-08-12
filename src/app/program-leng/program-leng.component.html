@@ -1,0 +1,17 @@
+<div class="col-2 offset-10 length">
+  <p> Мавзуъхо: {{PLElement.length}}</p>
+</div>
+<div class="col-10 offset-1 row" *ngFor="let LangElement of PLElement,let i = index  " >
+  <div class="col-10 mt-5">
+    <h4>{{ LangElement.title }}</h4>
+    <p>{{ LangElement.about }}</p>
+    <button class="btn btn-success offset-10" (click)="selectedIndex = i" *ngIf="selectedIndex !== i" >Тарчума</button>
+    <button class="btn btn-success offset-10" (click)="selectedIndex = null" *ngIf="selectedIndex === i">Руст кардан</button>
+  </div>
+
+  <div id="{{ i+ 1 }}" class="col-10 offset-1 mt-2 russ" *ngIf="selectedIndex === i" >
+    <i class="fa fa-arrow-up offset-6" style="opacity: 0.5;" ></i>
+    <h4>{{ LangElement.title_ru }}</h4>
+    <p>{{ LangElement.about_ru }}</p>
+  </div>
+</div>

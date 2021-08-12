@@ -1,0 +1,29 @@
+<div class="col-2 offset-10 length">
+  <p> Мавзуъхо: {{osElements.length}}</p>
+</div>
+<input type="text" [(ngModel)]="search" name="" id="">
+<div class="col-10 offset-1 row" *ngFor="let osElement of osElements | searchFilter: search:'title', let i = index" >
+  <div class="col-2 mt-5">
+    <img src="{{ osElement.image }}" alt="Photo" class="img-fluid">
+  </div>
+  <div class="col-10 mt-5">
+    <h4>{{ osElement.title }}</h4>
+    <p>{{ osElement.about }}</p>
+    <button class="btn btn-success offset-10" (click)="selectedIndex = i" *ngIf="selectedIndex !== i" >Тарчума</button>
+    <button class="btn btn-success offset-10" (click)="selectedIndex = null" *ngIf="selectedIndex === i">Руст кардан</button>
+  </div>
+
+  <div class="col-12 mt-2 russ"  *ngIf="selectedIndex === i" >
+    <i class="fa fa-arrow-up offset-6" style="opacity: 0.5;" ></i>
+    <h4>{{ osElement.title_ru }}</h4>
+    <p>{{ osElement.about_ru }}</p>
+  </div>
+</div>
+<div class="w-100 col-8 offset-2 pt-4 pb-4 " style="text-align: center">
+  <button class="btn ml-3 btn-success" routerLink="/OS" >1</button>
+  <button class="btn ml-3 btn-success" routerLink="/os2" >2</button>
+  <button class="btn ml-3 btn-success" routerLink="/os/3" >3</button>
+  <button class="btn ml-3 btn-success" routerLink="/os/4" >4</button>
+  <button class="btn ml-3 btn-success" routerLink="/os/5" >5</button>
+  <button class="btn ml-3 btn-success" routerLink="/os/6" >6</button>
+</div>

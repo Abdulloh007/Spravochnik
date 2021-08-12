@@ -1,0 +1,62 @@
+<section class="col-12 row" style="padding: 0;margin: 0;">
+    <nav class="nav col-12 bg-success" style="padding: 0;" >
+      <div class="col-2 ml-3">
+        <h4 class="-bold text-white logo-title mt-3"  routerLink="">Системаи Маълумоти</h4>
+      </div>
+      <div class="container col-8 offset-1">
+        <div class="row">
+        <ul class="col-6   mt-3">
+          <li class="d-inline-block  text-color"><a routerLink="">Асоси</a></li>
+          <li class="d-inline-block  text-color" ><a routerLink="About_us">Дар бораи лоиха</a></li>
+          <li class="d-inline-block  text-color" ><a routerLink="Contact_us">Тамос</a></li>
+        </ul>
+          <div class="col-5 offset-1  mt-2">
+            <form action="app.module.ts" style="display: inline-flex; width: 100%;">
+              <input type="text"  class="form-control green" aria-label="Search" [(ngModel)]="search"  >
+              <button class="searchBtn mt-1">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+<section class="col-2 p-0">
+  <div class="col-12 bg-secondary" >
+    <div class="container mainScrollSetings"  >
+      <div class="row scrollSetings"  >
+        <ul class="w-100 center p-0" >
+          <li class="w-li" class="collaps-color" *ngIf="isCollapse" (click)="Close()">Вожанома</li>
+          <li class="w-li"class="collaps-color" *ngIf="!isCollapse" (click)="Close()">Вожанома</li>
+          <ul *ngIf="!isCollapse" class="w-100 center p-0" >
+            <li class="w-li" ><a class="collaps-color" routerLink="OS">Системаи опирациони</a></li>
+            <li class="w-li" ><a class="collaps-color" routerLink="Computer_Graphic">Графики копютери</a></li>
+            <li class="w-li" ><a class="collaps-color" routerLink="Information`s_Base">Базаи маълумот</a></li>
+            <li class="w-li" ><a class="collaps-color" routerLink="Inform">Информатика</a></li>
+            <li class="w-li" ><a class="collaps-color" routerLink="Computer`s_Security">Бехатари омпютери</a></li>
+            <li class="w-li" ><a class="collaps-color" routerLink="Code">Коркарди замимахо</a></li>
+            <li class="w-li" ><a class="collaps-color" routerLink="Computer`s_Architecture">Архитектураи комп</a></li>
+            <li class="w-li" ><a class="collaps-color" routerLink="Program`s_Lang">Забонхои барномарези</a></li>
+            <li class="w-li" ><a class="collaps-color" routerLink="Internet">Интернет</a></li>
+            <li class="w-li" ><a class="collaps-color" routerLink="Network">Шабака</a></li>
+            <li class="w-li" ><a class="collaps-color" routerLink="Armature">Амбриватура</a></li>
+          </ul>
+          <li class="w-li"><a class="collaps-color" routerLink="Facts">Факты</a></li>
+          <li class="w-li"><a class="collaps-color" routerLink="Scientists">Учённые</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+  
+
+  <div class="col-10 p-0">
+    <div class="container mainScrollSetings">
+      <div class="row scrollSetings">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+
+  </div>
+
+</section>
